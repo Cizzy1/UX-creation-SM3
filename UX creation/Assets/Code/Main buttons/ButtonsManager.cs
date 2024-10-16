@@ -33,7 +33,7 @@ public class ButtonsManager : MonoBehaviour
         OptionsScreen.SetActive(false);
     }
 
-    public void Backshots(){
+    public void MenuLoad(){
         SceneManager.LoadScene("Menu");
     }
 }
