@@ -1,17 +1,95 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SimpleAnimations : MonoBehaviour
 {
+    [Header("Scale up open animation")]
+    public bool OpenWithScale;
+    public Vector3 OpenToScale;
+    public float OpenScaleTime;
+    
+
+    [Header("Scale up open animation")]
+    public bool CloseWithScale;
+    public float CloseScaleTime;
+
+
+    [Header("Looping sine scale")]
+    public bool LoopScale;
     public float maxScaleSize;
 
+    
+    [Header("Looping sine scale")]
+    public Color MaxAlpha;
+    public float timeToFade;
+    
+    
+    [Header("Move to animation")]
+    public bool MoveOnStart;
+    public RectTransform Panel;
+    public Vector2 HiddenPos;
+    public Vector2 UnHiddenPos;
+    public float TimeToMove;
+    public bool isToggleOn = true;
+    
+    #region On enable & on disable
     void OnEnable(){
-        
-        transform.localScale = new Vector3(1, 1, 1);
-        transform.DOScale(maxScaleSize, 1).SetEase(Ease.InSine).SetLoops(-1, LoopType.Yoyo);
+
+        if(LoopScale){
+            LoopScaleAnimation();
+        }
+
+        if(OpenWithScale){
+            OpenAndScale();
+        }
+
     }
 
     void OnDisable(){
         DOTween.Kill(transform);
     }
+    #endregion
+
+    #region Looping animations
+    public void LoopScaleAnimation(){
+        transform.localScale = new Vector3(1, 1, 1);
+        transform.DOScale(maxScaleSize, 1).SetEase(Ease.InSine).SetLoops(-1, LoopType.Yoyo);
+    }
+
+    #endregion
+
+    public void OpenAndScale(){
+        transform.localScale = Vector3.zero;
+        transform.DOScale(OpenToScale, OpenScaleTime);
+    }
+
+    public void CloseAnimation(){
+
+        // Over time the object will go from its current scale. I could only guess of Vector3(1, 1, 1) to
+        // Vector3(0, 0, 0) over whatever value is in CloseScaleTime;
+        transform.DOScale(new Vector3(0, 0, 0), CloseScaleTime);
+
+        // Saying this will be on the object that you want closing might as well put the disabling of the object there as well
+        gameObject.SetActive(false);
+    }
+    
+    public void FadeBack(){
+        GetComponent<Image>().DOColor(MaxAlpha, timeToFade);
+    }
+
+    #region Moveing panel
+    public void PanelMoving(bool isPanelOpen){
+        // if Panel is currently hidden move to be none hidden
+        if(isPanelOpen){
+            Panel.DOAnchorPos(UnHiddenPos, TimeToMove);
+            Debug.Log("Opened");
+        }
+        else{   
+            Panel.DOAnchorPos(HiddenPos, TimeToMove);
+            Debug.Log("Closed");
+        }
+        isToggleOn = isPanelOpen;
+    }
+    #endregion
 }
