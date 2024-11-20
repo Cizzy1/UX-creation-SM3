@@ -71,14 +71,16 @@ public class SimpleAnimations : MonoBehaviour
         transform.DOScale(new Vector3(0, 0, 0), CloseScaleTime);
 
         // Saying this will be on the object that you want closing might as well put the disabling of the object there as well
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        gameObject.transform.parent.gameObject.SetActive(false);
     }
+
     
     public void FadeBack(){
         GetComponent<Image>().DOColor(MaxAlpha, timeToFade);
     }
 
-    #region Moveing panel
+    #region Moving panel
     public void PanelMoving(bool isPanelOpen){
         // if Panel is currently hidden move to be none hidden
         if(isPanelOpen){
