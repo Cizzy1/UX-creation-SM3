@@ -18,16 +18,17 @@ public class LoginChecker : MonoBehaviour
     public void CheckFields(){
         // Check if the text in the field matches that of the passManager
 
-        if(Username.text == passManager.Username){
+        if(Username.text == ""){
+            Debug.Log("No username entered");
+            
+        }else if(Username.text == passManager.Nickname){
             UsernameCorrect = true;
-        }else{
-            Debug.Log("incorrect name");
         }
 
-        if(Password.text == passManager.Password){
+        if(Password.text == ""){
+            Debug.Log("No username entered");
+        }else if(Password.text == passManager.Password){
             PasswordCorrect = true;
-        }else{
-            Debug.Log("incorrect password");
         }
 
         if(UsernameCorrect && PasswordCorrect){
@@ -35,7 +36,7 @@ public class LoginChecker : MonoBehaviour
             // are correct. This will change and is only a temp system for
             // 20/11/24
 
-            Debug.Log("logged into " + passManager.Username);
+            Debug.Log("logged into " + passManager.Nickname);
 
             // Temp for now I will load the loading screen from here as well
             LoginCanvas.GetComponent<SimpleAnimations>().CloseAnimation();
