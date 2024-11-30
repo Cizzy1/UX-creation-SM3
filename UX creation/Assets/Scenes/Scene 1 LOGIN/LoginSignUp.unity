@@ -1082,7 +1082,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &191511182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,13 +1504,14 @@ GameObject:
   - component: {fileID: 267827534}
   - component: {fileID: 267827533}
   - component: {fileID: 267827532}
+  - component: {fileID: 267827536}
   m_Layer: 5
   m_Name: Canvas 2 - Login
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &267827532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1594,6 +1595,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &267827536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267827531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 054868853b0cba045b0658251de03fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrueOrFalse: 0
+  UsernameField: {fileID: 1107012659}
+  PasswordField: {fileID: 1367791317}
+  toggle: {fileID: 179315841}
 --- !u!1 &299532175
 GameObject:
   m_ObjectHideFlags: 0
@@ -7793,6 +7810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passManager: {fileID: 1035874930}
+  RememberMeToggle: {fileID: 179315841}
+  RememberInt: 0
   Username: {fileID: 1107012659}
   Password: {fileID: 1367791317}
   UsernameCorrect: 0

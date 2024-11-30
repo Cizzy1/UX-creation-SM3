@@ -9,6 +9,8 @@ public class GameData
     // Login details
     public string PlayerUsername;
     public string PlayerPassword;
+    // 1 = true     0 = false
+    public int RememberCredentials;
     
 
     // Other game things will be saved here
@@ -16,6 +18,6 @@ public class GameData
 
     // On the start this will automatically set everything to a default value
     public GameData(){
-        PlayerScore = 0;
+        RememberCredentials = 0;
     }
 }
