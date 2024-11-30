@@ -12,7 +12,7 @@ public class QuickStart : MonoBehaviour
             Canvas1.SetActive(true);
             Canvas2.SetActive(false);
             Canvas3.SetActive(false);
-            Canvas4.SetActive(false);
+            Canvas4.SetActive(true);
             Canvas5.SetActive(false);
 
         }
