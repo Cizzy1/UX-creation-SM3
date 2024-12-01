@@ -26,7 +26,7 @@ public class LoadingScreen : MonoBehaviour
         // Looping process that starts after .25s and then repeats "RandomAmount"
         // every random time between .1s - .5s. This gives the loading bar a slow
         // incremental increase.
-        InvokeRepeating("RandomAmount", .25f, Random.Range(.1f,.5f));
+        InvokeRepeating("RandomAmount", .25f, Random.Range(.01f,.13f));
     }
 
     void RandomAmount(){

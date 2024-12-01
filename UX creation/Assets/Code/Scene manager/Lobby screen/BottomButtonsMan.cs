@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 public class BottomButtonsMan : MonoBehaviour
@@ -16,18 +18,19 @@ public class BottomButtonsMan : MonoBehaviour
     /// changes to the correct screen and also within the correct function
     /// sets the sprite to be active??????
     /// </summary>
-    public GameObject Canvas1, Canvas2;
+    
+    [Header("Screens")]
+    public List<GameObject> Canvas;
 
-    // This needs to be set to the default of PlayBTN
-    public GameObject CurrentButton;
-    public GameObject LastButton;
+    [Header("Buttons")]
+    public List<Image> allBts;
 
+    [Header("Sprites")]
     public Sprite HighlightedImage;
     public Sprite NormalImage;
 
     void Start(){
         Play();
-        LastButton = CurrentButton;
     }
 
     // Remove  this from a update as this will also just keep opening the screen
@@ -38,10 +41,7 @@ public class BottomButtonsMan : MonoBehaviour
         {
             case 0:
                 Debug.Log("Selected play");
-                // call function that changes the screen and
-                // also keeps the button active as well. Even
-                // off click
-
+                Play();
                 break;
 
             case 1:
@@ -51,6 +51,22 @@ public class BottomButtonsMan : MonoBehaviour
 
             case 2:
                 Debug.Log("Selected Rhu-pass");
+                RhuPass();
+                break;
+
+            case 3:
+                Debug.Log("Selected Locker");
+                Locker();
+                break;
+
+            case 4:
+                Debug.Log("Selected Shop");
+                Shop();
+                break;
+
+            case 5:
+                Debug.Log("Selected Career");
+                Career();
                 break;
 
             default:
@@ -59,34 +75,73 @@ public class BottomButtonsMan : MonoBehaviour
         }
     }
 
-    // This next section will only be commented once
-
-    public void SelectedBTN(GameObject thisGO){
-        LastButton = CurrentButton;
-
-        // Can drag and drop the GO into this (itself)
-        // This will have to be called as well on the button
-
-        // This will set the current button to the currently
-        // clicked button. This can then be used later below
-        CurrentButton = thisGO;
-
-        // I guess now is to also to keep track of the previously
-        // pressed button
-    }
+    // On a button click i change the index int (done through button event)
+    // in the switch this correlates to a function (switch will call this)
+    // this function needs to change the sprite to active
+    // and also open said screen.
 
     public void Play(){
-        LastButton.GetComponent<Image>().sprite = NormalImage;
-        // Set the button to active
-        // Need a reference to the button. I dont think its possible to
-        // grab a button through a press
-        CurrentButton.GetComponent<Image>().sprite = HighlightedImage;
+        // Clear every button from being highlighted
+        ClearStatus();
 
+        // I know the index of the play button is 0
+        // This can be done throughout the rest of this
+        allBts[0].sprite = HighlightedImage;
+
+        // And I know the index of the canvas is 0
+        Canvas[0].SetActive(true);
     }
 
     public void Quests(){
-        LastButton.GetComponent<Image>().sprite = NormalImage;
-        CurrentButton.GetComponent<Image>().sprite = HighlightedImage;
+        ClearStatus();
+
+        allBts[1].sprite = HighlightedImage;
+
+        Canvas[1].SetActive(true);
     }
 
+    public void RhuPass(){
+        ClearStatus();
+
+        allBts[2].sprite = HighlightedImage;
+
+        Canvas[2].SetActive(true);
+    }
+
+    public void Locker(){
+        ClearStatus();
+
+        allBts[3].sprite = HighlightedImage;
+
+        Canvas[3].SetActive(true);
+    }
+
+    public void Shop(){
+        ClearStatus();
+
+        allBts[4].sprite = HighlightedImage;
+
+        Canvas[4].SetActive(true);
+    }
+
+    public void Career(){
+        ClearStatus();
+
+        allBts[5].sprite = HighlightedImage;
+
+        Canvas[5].SetActive(true);
+    }
+
+    // This sets all of the buttons to none clicked
+    void ClearStatus(){
+        foreach (var Image in allBts)
+        {
+            Image.sprite = NormalImage;
+        }
+
+        foreach (var canvas in Canvas)
+        {
+            canvas.SetActive(false);
+        }
+    }
 }

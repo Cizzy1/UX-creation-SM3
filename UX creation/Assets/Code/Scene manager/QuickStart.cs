@@ -15,6 +15,7 @@ public class QuickStart : MonoBehaviour
             Canvas4.SetActive(true);
             Canvas5.SetActive(false);
 
+            Canvas4.SetActive(false);
         }
     }
 }
