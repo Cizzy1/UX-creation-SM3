@@ -10,7 +10,7 @@ public class SimpleAnimations : MonoBehaviour
     public float OpenScaleTime;
     
 
-    [Header("Scale up open animation")]
+    [Header("Scale down close animation")]
     public bool CloseWithScale;
     public float CloseScaleTime;
 
@@ -22,6 +22,7 @@ public class SimpleAnimations : MonoBehaviour
     
     [Header("Looping sine scale")]
     public Color MaxAlpha;
+    public Color MinAlpha;
     public float timeToFade;
     
     
@@ -68,16 +69,23 @@ public class SimpleAnimations : MonoBehaviour
 
         // Over time the object will go from its current scale. I could only guess of Vector3(1, 1, 1) to
         // Vector3(0, 0, 0) over whatever value is in CloseScaleTime;
-        transform.DOScale(new Vector3(0, 0, 0), CloseScaleTime);
+        transform.DOScale(Vector3.zero, CloseScaleTime);
 
         // Saying this will be on the object that you want closing might as well put the disabling of the object there as well
         //gameObject.SetActive(false);
         gameObject.transform.parent.gameObject.SetActive(false);
     }
 
-    
-    public void FadeBack(){
+    public void CloseAnimationWithoutParent(){
+        transform.DOScale(Vector3.zero, CloseScaleTime);
+
+    }
+
+    public void FadeOn(){
         GetComponent<Image>().DOColor(MaxAlpha, timeToFade);
+    }
+    public void FadeBack(){
+        GetComponent<Image>().DOColor(MinAlpha, timeToFade);
     }
 
     #region Moving panel

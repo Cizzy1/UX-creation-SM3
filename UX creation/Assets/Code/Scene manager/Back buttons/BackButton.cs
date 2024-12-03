@@ -15,4 +15,11 @@ public class BackButton : MonoBehaviour
 
         TargetScreen.SetActive(true);
     }
+
+    [Header("Panels")]
+    public GameObject PanelToClose;
+
+    public void CloseThisPanel(){
+        PanelToClose.GetComponent<SimpleAnimations>().CloseAnimationWithoutParent();
+    }
 }

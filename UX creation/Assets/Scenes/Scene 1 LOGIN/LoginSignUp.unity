@@ -350,6 +350,7 @@ MonoBehaviour:
   LoopScale: 0
   maxScaleSize: 0
   MaxAlpha: {r: 0, g: 0, b: 0, a: 0}
+  MinAlpha: {r: 0, g: 0, b: 0, a: 0}
   timeToFade: 0
   MoveOnStart: 0
   Panel: {fileID: 0}
@@ -2118,14 +2119,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -3865,6 +3866,7 @@ MonoBehaviour:
   LoopScale: 1
   maxScaleSize: 0.9
   MaxAlpha: {r: 0, g: 0, b: 0, a: 0}
+  MinAlpha: {r: 0, g: 0, b: 0, a: 0}
   timeToFade: 0
   MoveOnStart: 0
   Panel: {fileID: 0}
@@ -4498,7 +4500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &694707311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8026,6 +8028,7 @@ MonoBehaviour:
   LoopScale: 0
   maxScaleSize: 0
   MaxAlpha: {r: 1, g: 1, b: 1, a: 1}
+  MinAlpha: {r: 0, g: 0, b: 0, a: 0}
   timeToFade: 1
   MoveOnStart: 0
   Panel: {fileID: 0}
@@ -10458,6 +10461,7 @@ MonoBehaviour:
   LoopScale: 0
   maxScaleSize: 0
   MaxAlpha: {r: 0, g: 0, b: 0, a: 0}
+  MinAlpha: {r: 0, g: 0, b: 0, a: 0}
   timeToFade: 0
   MoveOnStart: 0
   Panel: {fileID: 0}
@@ -10613,6 +10617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentScreen: {fileID: 267827531}
   TargetScreen: {fileID: 45938483}
+  PanelToClose: {fileID: 0}
 --- !u!1 &1478329336
 GameObject:
   m_ObjectHideFlags: 0
@@ -10836,14 +10841,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -11553,6 +11558,7 @@ MonoBehaviour:
   LoopScale: 0
   maxScaleSize: 0
   MaxAlpha: {r: 0, g: 0, b: 0, a: 0}
+  MinAlpha: {r: 0, g: 0, b: 0, a: 0}
   timeToFade: 0
   MoveOnStart: 0
   Panel: {fileID: 0}
@@ -12342,14 +12348,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0

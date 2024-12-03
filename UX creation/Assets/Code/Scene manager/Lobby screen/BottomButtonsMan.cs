@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Reflection;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class BottomButtonsMan : MonoBehaviour
 {
@@ -29,8 +31,12 @@ public class BottomButtonsMan : MonoBehaviour
     public Sprite HighlightedImage;
     public Sprite NormalImage;
 
-    void Start(){
-        Play();
+    // Script references
+    BottomButtonsAnimations bottomButtonsAnimations;
+
+    public void Start(){
+        ClearStatus();
+        CheckIndex(0);
     }
 
     // Remove  this from a update as this will also just keep opening the screen
@@ -40,32 +46,32 @@ public class BottomButtonsMan : MonoBehaviour
         switch (Index)
         {
             case 0:
-                Debug.Log("Selected play");
+                //Debug.Log("Selected play");
                 Play();
                 break;
 
             case 1:
-                Debug.Log("Selected Quests");
+                //Debug.Log("Selected Quests");
                 Quests();
                 break;
 
             case 2:
-                Debug.Log("Selected Rhu-pass");
+                //Debug.Log("Selected Rhu-pass");
                 RhuPass();
                 break;
 
             case 3:
-                Debug.Log("Selected Locker");
+                //Debug.Log("Selected Locker");
                 Locker();
                 break;
 
             case 4:
-                Debug.Log("Selected Shop");
+                //Debug.Log("Selected Shop");
                 Shop();
                 break;
 
             case 5:
-                Debug.Log("Selected Career");
+                //Debug.Log("Selected Career");
                 Career();
                 break;
 
@@ -88,6 +94,12 @@ public class BottomButtonsMan : MonoBehaviour
         // This can be done throughout the rest of this
         allBts[0].sprite = HighlightedImage;
 
+        // This will stop the nudge animation playing on this button
+        allBts[0].GetComponent<BottomButtonsAnimations>().IsActive = true;
+        // Now need to activate the animation for the button being active
+        allBts[0].GetComponent<BottomButtonsAnimations>().ActiveAnim();
+
+
         // And I know the index of the canvas is 0
         Canvas[0].SetActive(true);
     }
@@ -97,6 +109,9 @@ public class BottomButtonsMan : MonoBehaviour
 
         allBts[1].sprite = HighlightedImage;
 
+        allBts[1].GetComponent<BottomButtonsAnimations>().IsActive = true;
+        allBts[1].GetComponent<BottomButtonsAnimations>().ActiveAnim();
+
         Canvas[1].SetActive(true);
     }
 
@@ -104,6 +119,9 @@ public class BottomButtonsMan : MonoBehaviour
         ClearStatus();
 
         allBts[2].sprite = HighlightedImage;
+
+        allBts[2].GetComponent<BottomButtonsAnimations>().IsActive = true;
+        allBts[2].GetComponent<BottomButtonsAnimations>().ActiveAnim();
 
         Canvas[2].SetActive(true);
     }
@@ -113,6 +131,9 @@ public class BottomButtonsMan : MonoBehaviour
 
         allBts[3].sprite = HighlightedImage;
 
+        allBts[3].GetComponent<BottomButtonsAnimations>().IsActive = true;
+        allBts[3].GetComponent<BottomButtonsAnimations>().ActiveAnim();
+
         Canvas[3].SetActive(true);
     }
 
@@ -120,6 +141,9 @@ public class BottomButtonsMan : MonoBehaviour
         ClearStatus();
 
         allBts[4].sprite = HighlightedImage;
+
+        allBts[4].GetComponent<BottomButtonsAnimations>().IsActive = true;
+        allBts[4].GetComponent<BottomButtonsAnimations>().ActiveAnim();
 
         Canvas[4].SetActive(true);
     }
@@ -129,6 +153,9 @@ public class BottomButtonsMan : MonoBehaviour
 
         allBts[5].sprite = HighlightedImage;
 
+        allBts[5].GetComponent<BottomButtonsAnimations>().IsActive = true;
+        allBts[5].GetComponent<BottomButtonsAnimations>().ActiveAnim();
+
         Canvas[5].SetActive(true);
     }
 
@@ -137,6 +164,8 @@ public class BottomButtonsMan : MonoBehaviour
         foreach (var Image in allBts)
         {
             Image.sprite = NormalImage;
+            Image.GetComponent<BottomButtonsAnimations>().IsActive = false;
+            Image.GetComponent<BottomButtonsAnimations>().DefaultPos();
         }
 
         foreach (var canvas in Canvas)
