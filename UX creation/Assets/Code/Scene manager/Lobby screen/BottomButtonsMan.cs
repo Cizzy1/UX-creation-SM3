@@ -32,6 +32,10 @@ public class BottomButtonsMan : MonoBehaviour
     public Sprite HighlightedImage;
     public Sprite NormalImage;
 
+    [Header("Extra Properties")]
+    public GameObject PlayerGO;
+    public Vector3 PlayerOriginRotation;
+
     // Script references
     BottomButtonsAnimations bottomButtonsAnimations;
 
@@ -90,6 +94,8 @@ public class BottomButtonsMan : MonoBehaviour
     public void Play(){
         // Clear every button from being highlighted
         ClearStatus();
+
+        PlayerGO.transform.eulerAngles = PlayerOriginRotation;
 
         // I know the index of the play button is 0
         // This can be done throughout the rest of this
