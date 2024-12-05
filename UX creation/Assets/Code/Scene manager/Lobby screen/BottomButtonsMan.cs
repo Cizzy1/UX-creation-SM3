@@ -35,6 +35,7 @@ public class BottomButtonsMan : MonoBehaviour
     [Header("Extra Properties")]
     public GameObject PlayerGO;
     public Vector3 PlayerOriginRotation;
+    public Camera LockerCam;
 
     // Script references
     BottomButtonsAnimations bottomButtonsAnimations;
@@ -86,6 +87,23 @@ public class BottomButtonsMan : MonoBehaviour
         }
     }
 
+    void ChangeScreen(int Index){
+
+        // I know the index of the play button is 0
+        // This can be done throughout the rest of this
+        allBts[Index].sprite = HighlightedImage;
+
+        // This will stop the nudge animation playing on this button
+        allBts[Index].GetComponent<BottomButtonsAnimations>().IsActive = true;
+        // Now need to activate the animation for the button being active
+        allBts[Index].GetComponent<BottomButtonsAnimations>().ActiveAnim();
+
+
+        // And I know the index of the canvas is 0
+        Canvas[Index].SetActive(true);
+    }
+
+    #region Switch through screens
     // On a button click i change the index int (done through button event)
     // in the switch this correlates to a function (switch will call this)
     // this function needs to change the sprite to active
@@ -97,79 +115,51 @@ public class BottomButtonsMan : MonoBehaviour
 
         PlayerGO.transform.eulerAngles = PlayerOriginRotation;
 
-        // I know the index of the play button is 0
-        // This can be done throughout the rest of this
-        allBts[0].sprite = HighlightedImage;
-
-        // This will stop the nudge animation playing on this button
-        allBts[0].GetComponent<BottomButtonsAnimations>().IsActive = true;
-        // Now need to activate the animation for the button being active
-        allBts[0].GetComponent<BottomButtonsAnimations>().ActiveAnim();
-
-
-        // And I know the index of the canvas is 0
-        Canvas[0].SetActive(true);
+        ChangeScreen(0);
     }
 
     public void Quests(){
         ClearStatus();
 
-        allBts[1].sprite = HighlightedImage;
-
-        allBts[1].GetComponent<BottomButtonsAnimations>().IsActive = true;
-        allBts[1].GetComponent<BottomButtonsAnimations>().ActiveAnim();
-
-        Canvas[1].SetActive(true);
+        ChangeScreen(1);
     }
+
 
     public void RhuPass(){
         ClearStatus();
 
-        allBts[2].sprite = HighlightedImage;
+        LockerCam.gameObject.SetActive(true);
 
-        allBts[2].GetComponent<BottomButtonsAnimations>().IsActive = true;
-        allBts[2].GetComponent<BottomButtonsAnimations>().ActiveAnim();
-
-        Canvas[2].SetActive(true);
+        ChangeScreen(2);
     }
 
     public void Locker(){
         ClearStatus();
 
-        allBts[3].sprite = HighlightedImage;
+        LockerCam.gameObject.SetActive(true);
 
-        allBts[3].GetComponent<BottomButtonsAnimations>().IsActive = true;
-        allBts[3].GetComponent<BottomButtonsAnimations>().ActiveAnim();
-
-        Canvas[3].SetActive(true);
+        ChangeScreen(3);
     }
 
     public void Shop(){
         ClearStatus();
 
-        allBts[4].sprite = HighlightedImage;
-
-        allBts[4].GetComponent<BottomButtonsAnimations>().IsActive = true;
-        allBts[4].GetComponent<BottomButtonsAnimations>().ActiveAnim();
-
-        Canvas[4].SetActive(true);
+        ChangeScreen(4);
     }
 
     public void Career(){
         ClearStatus();
 
-        allBts[5].sprite = HighlightedImage;
-
-        allBts[5].GetComponent<BottomButtonsAnimations>().IsActive = true;
-        allBts[5].GetComponent<BottomButtonsAnimations>().ActiveAnim();
-
-        Canvas[5].SetActive(true);
+        ChangeScreen(5);
     }
+
+    #endregion
 
     // This sets all of the buttons to none clicked
     void ClearStatus(){
         foreach (var Image in allBts)
         {
+            LockerCam.gameObject.SetActive(false);
             Image.sprite = NormalImage;
             Image.GetComponent<BottomButtonsAnimations>().IsActive = false;
             Image.GetComponent<BottomButtonsAnimations>().DefaultPos();
