@@ -79,6 +79,7 @@ public class SimpleAnimations : MonoBehaviour
     public void CloseAnimationWithoutParent(){
         transform.DOScale(Vector3.zero, CloseScaleTime);
 
+        gameObject.SetActive(false);
     }
 
     public void FadeOn(){

@@ -92,6 +92,9 @@ public class BottomButtonsMan : MonoBehaviour
         // I know the index of the play button is 0
         // This can be done throughout the rest of this
         allBts[Index].sprite = HighlightedImage;
+        
+        // Set the button to non interactable
+        allBts[Index].GetComponent<Button>().interactable = false;
 
         // This will stop the nudge animation playing on this button
         allBts[Index].GetComponent<BottomButtonsAnimations>().IsActive = true;
@@ -163,6 +166,12 @@ public class BottomButtonsMan : MonoBehaviour
             Image.sprite = NormalImage;
             Image.GetComponent<BottomButtonsAnimations>().IsActive = false;
             Image.GetComponent<BottomButtonsAnimations>().DefaultPos();
+        }
+
+        for (int i = 0; i < allBts.Count; i++)
+        {
+            // Set the button to interactable
+            allBts[i].GetComponent<Button>().interactable = true;
         }
 
         foreach (var canvas in Canvas)

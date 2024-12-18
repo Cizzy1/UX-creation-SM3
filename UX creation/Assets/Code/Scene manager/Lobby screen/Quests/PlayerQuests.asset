@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37de1691d9b9d04a947f1d806ae1c02, type: 3}
+  m_Name: PlayerQuests
+  m_EditorClassIdentifier: 
+  quests:
+  - Icon: {fileID: 21300000, guid: bfa43383538e9ea4bacd8e7017ea1e23, type: 3}
+    Header: Cross map
+    Description: Visit Battle Beach and Cosy Cover in one match.
+    ChallengeAmount: 0/1
+    XPAmount: 15
+  - Icon: {fileID: 21300000, guid: bfa43383538e9ea4bacd8e7017ea1e23, type: 3}
+    Header: Docking?
+    Description: Meet with Sol at Dunkin Docks
+    ChallengeAmount: 0/1
+    XPAmount: 50
+  - Icon: {fileID: 21300000, guid: dd18e3b5a0f522f4bb0d746c6d815f5b, type: 3}
+    Header: Discuss the takeover.
+    Description: Talk to jumping Jeff. At kill korner.
+    ChallengeAmount: 0/1
+    XPAmount: 15
+  - Icon: {fileID: 21300000, guid: bbc5e10897726424ba5649e2e3256229, type: 3}
+    Header: Kill frenzy
+    Description: Get 25 kills at Kill Korner.
+    ChallengeAmount: 0/25
+    XPAmount: 25
+  - Icon: {fileID: 21300000, guid: dd18e3b5a0f522f4bb0d746c6d815f5b, type: 3}
+    Header: Speak to Hawk
+    Description: Talk to Hawk in Plane Crazy
+    ChallengeAmount: 0/1
+    XPAmount: 20
+  - Icon: {fileID: 21300000, guid: bbc5e10897726424ba5649e2e3256229, type: 3}
+    Header: Splats all folks!
+    Description: Kill enemies with the Splatter Gun.
+    ChallengeAmount: 0/5
+    XPAmount: 15
+  - Icon: {fileID: 21300000, guid: bfa43383538e9ea4bacd8e7017ea1e23, type: 3}
+    Header: All around the world.
+    Description: Visit 4 named locations in one match
+    ChallengeAmount: 0/4
+    XPAmount: 20
+  - Icon: {fileID: 21300000, guid: bbc5e10897726424ba5649e2e3256229, type: 3}
+    Header: Nice shot
+    Description: Kill enemies with head shot
+    ChallengeAmount: 0/15
+    XPAmount: 20
+  - Icon: {fileID: 21300000, guid: bfa43383538e9ea4bacd8e7017ea1e23, type: 3}
+    Header: Suns out guns out
+    Description: Visit Battle Beach
+    ChallengeAmount: 0/1
+    XPAmount: 10
+  - Icon: {fileID: 21300000, guid: bbc5e10897726424ba5649e2e3256229, type: 3}
+    Header: 50
+    Description: Kill at least 5 enemies in all of the POI's
+    ChallengeAmount: 0/35
+    XPAmount: 25

@@ -47,7 +47,7 @@ public class LoadingScreen : MonoBehaviour
         // Check if the max value of the fillAmount is met
         if(LoadingBar.fillAmount == 1f){
             // IF yes load "MainScreen"
-            SceneManager.LoadScene("MainScreen");
+            SceneManager.LoadScene("LobbyScreen");
         }
     }
 }

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590b07a4439adfc47a57d8e205c70753, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  items:
+  - ItemIcon: {fileID: 7201033032508513469, guid: adc19b3cf41fbb14eac15852471ee000,
+      type: 3}
+    TierNumber: 0
+    ItemName: RED box
+    Description: This is a red icon
+  - ItemIcon: {fileID: 1864544986862959931, guid: 5fcfc8a87a034394c99a4dde3886c49b,
+      type: 3}
+    TierNumber: 0
+    ItemName: Orange box
+    Description: This is a orange icon
+  - ItemIcon: {fileID: 7265753108271434427, guid: 9ecf95912e6e00d4e939d980bc8527d0,
+      type: 3}
+    TierNumber: 0
+    ItemName: green box
+    Description: This is a green icon
+  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+      type: 3}
+    TierNumber: 0
+    ItemName: gsdfgsdf
+    Description: This is a blue icon
