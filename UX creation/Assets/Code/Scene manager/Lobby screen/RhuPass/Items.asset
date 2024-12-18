@@ -18,18 +18,64 @@ MonoBehaviour:
     TierNumber: 0
     ItemName: RED box
     Description: This is a red icon
+    ItemToPresent: {fileID: 0}
   - ItemIcon: {fileID: 1864544986862959931, guid: 5fcfc8a87a034394c99a4dde3886c49b,
       type: 3}
     TierNumber: 0
     ItemName: Orange box
     Description: This is a orange icon
+    ItemToPresent: {fileID: 0}
   - ItemIcon: {fileID: 7265753108271434427, guid: 9ecf95912e6e00d4e939d980bc8527d0,
       type: 3}
     TierNumber: 0
     ItemName: green box
     Description: This is a green icon
+    ItemToPresent: {fileID: 0}
   - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
       type: 3}
     TierNumber: 0
     ItemName: gsdfgsdf
     Description: This is a blue icon
+    ItemToPresent: {fileID: 0}
+  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+      type: 3}
+    TierNumber: 0
+    ItemName: gsdfgsdf
+    Description: This is a blue icon
+    ItemToPresent: {fileID: 0}
+  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+      type: 3}
+    TierNumber: 0
+    ItemName: gsdfgsdf
+    Description: This is a blue icon
+    ItemToPresent: {fileID: 0}
+  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+      type: 3}
+    TierNumber: 0
+    ItemName: gsdfgsdf
+    Description: This is a blue icon
+    ItemToPresent: {fileID: 0}
+  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+      type: 3}
+    TierNumber: 0
+    ItemName: gsdfgsdf
+    Description: This is a blue icon
+    ItemToPresent: {fileID: 0}
+  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+      type: 3}
+    TierNumber: 0
+    ItemName: gsdfgsdf
+    Description: This is a blue icon
+    ItemToPresent: {fileID: 0}
+  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+      type: 3}
+    TierNumber: 0
+    ItemName: gsdfgsdf
+    Description: This is a blue icon
+    ItemToPresent: {fileID: 0}
+  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+      type: 3}
+    TierNumber: 0
+    ItemName: gsdfgsdf
+    Description: This is a blue icon
+    ItemToPresent: {fileID: 0}

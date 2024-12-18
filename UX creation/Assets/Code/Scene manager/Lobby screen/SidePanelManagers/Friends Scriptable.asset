@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   friends:
   - ActivityStatus: {fileID: 21300000, guid: a31ff91a9e5c5fc478e603e6857a7707, type: 3}
-    Username: SirSkibidiThe2ND
+    Username: SirSkibidi
     Status: Online
   - ActivityStatus: {fileID: 21300000, guid: 17492a5b1f9d0414292903e01ec540aa, type: 3}
     Username: LittleLegs60
@@ -29,7 +29,7 @@ MonoBehaviour:
     Username: Defconsoft
     Status: Playing Duos
   - ActivityStatus: {fileID: 21300000, guid: a31ff91a9e5c5fc478e603e6857a7707, type: 3}
-    Username: ShadowRimmer420
+    Username: ShadowRimmers
     Status: In Lobby
   - ActivityStatus: {fileID: 21300000, guid: a31ff91a9e5c5fc478e603e6857a7707, type: 3}
     Username: xXEpicGamerXx
@@ -41,7 +41,7 @@ MonoBehaviour:
     Username: ButterCat
     Status: Playing Solos
   - ActivityStatus: {fileID: 21300000, guid: a31ff91a9e5c5fc478e603e6857a7707, type: 3}
-    Username: ThreeLittleLegs221
+    Username: ThreeLittleLegs1
     Status: In Lobby
   - ActivityStatus: {fileID: 21300000, guid: 2ebdc5a28033fd844a8714eea9137635, type: 3}
     Username: Not_Nick0154

@@ -44,23 +44,23 @@ public class RhuPassManager : MonoBehaviour
             ItemObject.transform.Find("Tier").GetComponent<TMP_Text>().text = "Tier " + rhuPassItems.items[i].TierNumber;
             ItemObject.transform.Find("ItemName").GetComponent<TMP_Text>().text = rhuPassItems.items[i].ItemName;
             ItemObject.transform.Find("ItemLocation").GetComponent<TMP_Text>().text = rhuPassItems.items[i].Description;
+
+            ItemObject.transform.Find("BG").GetComponent<Button>().onClick.AddListener(() => OnClick());
+
+            ItemObject.transform.Find("BG").GetComponent<Button>().onClick.AddListener(() => ChangingOutItem(i));
             
             GameObject IconToSpawn = Instantiate(rhuPassItems.items[i].ItemIcon, ItemObject.transform.Find("IconParent").transform);
 
             if(i == 0){
                 Grow(ItemObject);
-                ChangeItem();
             }
         }
     }
 
-    void ChangeItem(){
-        
-    }
 
     GameObject CurrentSelection;
 
-    void OnClick(){
+    public void OnClick(){
         // Use event system to figure out what has been clicked
         if(CurrentSelection != null)
         {
@@ -72,15 +72,17 @@ public class RhuPassManager : MonoBehaviour
 
     void Grow(GameObject GO){
         GO.GetComponentInChildren<Button>().interactable = false;
-        GO.transform.DOScale(1.1f, .5f);
+        GO.transform.parent.DOScale(1.1f, .5f);
+        
+        CurrentSelection = GO;
     }
 
     void Shrink(GameObject GO){
-        GO.GetComponent<Button>().interactable = true;
-        GO.transform.DOScale(1f, .5f);
+        GO.GetComponentInChildren<Button>().interactable = true;
+        GO.transform.parent.DOScale(1f, .5f);
     }
-    
-    void ChangingOutItem(){
+
+    void ChangingOutItem(int index){
         
     }
 

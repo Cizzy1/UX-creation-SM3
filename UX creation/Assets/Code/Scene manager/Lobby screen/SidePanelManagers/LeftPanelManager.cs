@@ -20,6 +20,10 @@ public class LeftPanelManager : MonoBehaviour
     public TMP_Text HeaderBG;
     public TMP_Text HeaderText;
 
+    [Header("Button text")]
+    public TMP_Text OnlineTextBG;
+    public TMP_Text OnlineText;
+
     void Start(){
         AmountOfFriends = Random.Range(7, 20);
 
@@ -45,6 +49,9 @@ public class LeftPanelManager : MonoBehaviour
         // Setting how many friends are online and overall
         HeaderBG.text = "Friends (" + OnlineFriends + "/" + AmountOfFriends + ")";
         HeaderText.text = "Friends (" + OnlineFriends + "/" + AmountOfFriends + ")"; 
+
+        OnlineTextBG.text = OnlineFriends.ToString();
+        OnlineText.text = OnlineFriends.ToString();
     }
 
     void GenerateRandomQuests(int index)

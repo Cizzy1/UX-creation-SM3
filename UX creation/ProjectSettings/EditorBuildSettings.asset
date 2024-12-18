@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Scene 1 Login/LoginSignUp.unity
+    path: Assets/Scenes/Scene 1 LOGIN/LoginSignUp.unity
     guid: ea4d1cf43c9de994086be5e3b8738f7d
   - enabled: 1
     path: Assets/Scenes/Scene 2 Lobby/LobbyScreen.unity
