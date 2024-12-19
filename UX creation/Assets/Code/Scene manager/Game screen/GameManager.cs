@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     [Header("Open Quests")]
     public GameObject QuestScreen;
     public bool isOpen;
+    public bool SideMenuOpen;
+
+    public MovePanel movePanel;
 
     void Update()
     {
@@ -27,6 +30,18 @@ public class GameManager : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.Q)){
             isOpen = false;
             QuestScreen.SetActive(false);
+        }
+
+
+        // ESC to open side menu
+        if(!SideMenuOpen && Input.GetKeyDown(KeyCode.Escape)){
+            SideMenuOpen = true;
+            // This will open the side panel.
+            movePanel.MoveMenu();
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape)){
+            SideMenuOpen = false;
+            movePanel.ResetPlacement();
         }
         
 

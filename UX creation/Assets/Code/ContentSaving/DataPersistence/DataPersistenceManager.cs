@@ -6,6 +6,13 @@ using UnityEngine;
 // Something about making finding objects with IDataPersistence easier
 using System.Linq;
 
+/// <summary>
+/// 
+/// The file can be found -> c:\Users\USER\AppData\LocalLow\DefaultCompany\UX creation\TestGameData.json
+/// 
+/// </summary>
+
+
 public class DataPersistenceManager : MonoBehaviour
 {
     [Header("File storage config")]
