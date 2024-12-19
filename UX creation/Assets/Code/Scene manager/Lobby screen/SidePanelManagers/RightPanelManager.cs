@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -63,5 +61,9 @@ public class RightPanelManager : MonoBehaviour
     public void QuitApp(){
         Debug.Log("Application closed");
         Application.Quit();
+    }
+
+    public void ReturnToLobby(){
+        SceneManager.LoadScene("LobbyScreen");
     }
 }

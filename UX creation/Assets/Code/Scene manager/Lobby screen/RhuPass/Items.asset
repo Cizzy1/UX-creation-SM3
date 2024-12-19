@@ -16,66 +16,44 @@ MonoBehaviour:
   - ItemIcon: {fileID: 7201033032508513469, guid: adc19b3cf41fbb14eac15852471ee000,
       type: 3}
     TierNumber: 0
-    ItemName: RED box
-    Description: This is a red icon
-    ItemToPresent: {fileID: 0}
+    ItemName: Blue Body
+    Description: This is a blue body
+    ItemToPresent: {fileID: 3977671115681822806, guid: a91a6b68fc8c9b445ac8261d31c4ef35,
+      type: 3}
   - ItemIcon: {fileID: 1864544986862959931, guid: 5fcfc8a87a034394c99a4dde3886c49b,
       type: 3}
     TierNumber: 0
-    ItemName: Orange box
-    Description: This is a orange icon
+    ItemName: Bow Tie
+    Description: Tiny tie
+    ItemToPresent: {fileID: 924335489344600303, guid: 8dfcb46915377b6478ca072fc88eb330,
+      type: 3}
+  - ItemIcon: {fileID: 7265753108271434427, guid: 9ecf95912e6e00d4e939d980bc8527d0,
+      type: 3}
+    TierNumber: 0
+    ItemName: Boxing Gloves
+    Description: Boxing Gloves
     ItemToPresent: {fileID: 0}
   - ItemIcon: {fileID: 7265753108271434427, guid: 9ecf95912e6e00d4e939d980bc8527d0,
       type: 3}
     TierNumber: 0
-    ItemName: green box
-    Description: This is a green icon
+    ItemName: Bunny Ears
+    Description: Wa wa waawawa - Rabids
     ItemToPresent: {fileID: 0}
-  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+  - ItemIcon: {fileID: 7265753108271434427, guid: 9ecf95912e6e00d4e939d980bc8527d0,
       type: 3}
     TierNumber: 0
-    ItemName: gsdfgsdf
-    Description: This is a blue icon
+    ItemName: Crocked teeth
+    Description: Something here
     ItemToPresent: {fileID: 0}
-  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+  - ItemIcon: {fileID: 7265753108271434427, guid: 9ecf95912e6e00d4e939d980bc8527d0,
       type: 3}
     TierNumber: 0
-    ItemName: gsdfgsdf
-    Description: This is a blue icon
+    ItemName: Item 6?
+    Description: Something here
     ItemToPresent: {fileID: 0}
-  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
+  - ItemIcon: {fileID: 7265753108271434427, guid: 9ecf95912e6e00d4e939d980bc8527d0,
       type: 3}
     TierNumber: 0
-    ItemName: gsdfgsdf
-    Description: This is a blue icon
-    ItemToPresent: {fileID: 0}
-  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
-      type: 3}
-    TierNumber: 0
-    ItemName: gsdfgsdf
-    Description: This is a blue icon
-    ItemToPresent: {fileID: 0}
-  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
-      type: 3}
-    TierNumber: 0
-    ItemName: gsdfgsdf
-    Description: This is a blue icon
-    ItemToPresent: {fileID: 0}
-  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
-      type: 3}
-    TierNumber: 0
-    ItemName: gsdfgsdf
-    Description: This is a blue icon
-    ItemToPresent: {fileID: 0}
-  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
-      type: 3}
-    TierNumber: 0
-    ItemName: gsdfgsdf
-    Description: This is a blue icon
-    ItemToPresent: {fileID: 0}
-  - ItemIcon: {fileID: 2012730066753005715, guid: a3ac8e48bd905af4bbaa2516809f398b,
-      type: 3}
-    TierNumber: 0
-    ItemName: gsdfgsdf
-    Description: This is a blue icon
+    ItemName: 7?
+    Description: This is a short season
     ItemToPresent: {fileID: 0}

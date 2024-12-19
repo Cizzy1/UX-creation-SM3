@@ -25,7 +25,6 @@ public class RhuPassManager : MonoBehaviour
 
     [Header("Items to generate")]
     bool HasGenerated;
-    List<int> ItemsInUse = new List<int>();
     public GameObject ContentGO;
     public GameObject ItemsTemplate;
     public RhuPassItems rhuPassItems;
@@ -50,6 +49,9 @@ public class RhuPassManager : MonoBehaviour
             ItemObject.transform.Find("BG").GetComponent<Button>().onClick.AddListener(() => ChangingOutItem(i));
             
             GameObject IconToSpawn = Instantiate(rhuPassItems.items[i].ItemIcon, ItemObject.transform.Find("IconParent").transform);
+            
+            /* GameObject ItemToSpawn = Instantiate(rhuPassItems.items[i].ItemToPresent, ItemSpawnPoint.transform);
+            ItemSpawnPoint.SetActive(false); */
 
             if(i == 0){
                 Grow(ItemObject);
@@ -82,25 +84,25 @@ public class RhuPassManager : MonoBehaviour
         GO.transform.parent.DOScale(1f, .5f);
     }
 
-    void ChangingOutItem(int index){
-        
-    }
 
     // Changing out the items
 
     [Header("Switching items out")]
     public GameObject ItemSpawnPoint;
-    void ShowItem(){
+    void ChangingOutItem(int index){
+        HideItem();
         // Check the index of this within the Content obj (parent of the button)
         // Then check parent index and see what index it is to the scriptables
         // Then get the scriptable match and then get from its variable the item
         // to show. Then instantiate the object in the scene on the correct point
 
-
+        
+        
     }
+    
 
     void HideItem(){
-
+        
     }
 
     
